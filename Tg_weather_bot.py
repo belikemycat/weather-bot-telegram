@@ -2,7 +2,7 @@ import requests
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 import time
-API_KEY = "7656213072:AAFlkE7AFRHIS2xqiH5RJ875EJL7yjktPsg"
+API_KEY = "YOUR BOT'S TOKEN!"
 WEATHER_API_KEY = "3bc309f50c8c26fb6ff56420c3d2fadf"
 
 def get_weather(city):
@@ -53,9 +53,9 @@ def get_weather_icon(weather_id, is_daytime):
     elif weather_id == 781:
         return "🌪️"
     elif weather_id == 800:
-        return "☀️" if is_daytime else "🌑"  # Солнце днём и луна ночью
+        return "☀️" if is_daytime else "🌑"  
     elif 801 <= weather_id <= 804:
-        return "⛅" if is_daytime else "☁️"  # Облака днём и ночью
+        return "⛅" if is_daytime else "☁️" 
     else:
         return "🌡️"
 
